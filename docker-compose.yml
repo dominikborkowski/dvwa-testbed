@@ -1,0 +1,27 @@
+version: '3'
+services:
+
+##############################################################################
+# start containers
+
+  dvwa:
+    container_name: 'dvwa'
+    build:
+      context: ./
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    networks:
+      dvwa-network:
+
+# end containers
+##############################################################################
+
+##############################################################################
+# start volumes and networks
+
+networks:
+  dvwa-network:
+
+# end of volumes and networks
+##############################################################################
