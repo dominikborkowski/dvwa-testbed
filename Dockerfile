@@ -14,6 +14,7 @@ RUN apt-get update && \
         php-pgsql \
         php-pear \
         php-gd \
+        iputils-ping \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
